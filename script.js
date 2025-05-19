@@ -1,19 +1,29 @@
 const priceListItem = document.querySelectorAll(".price-list");
+const allLinks = [...document.getElementsByTagName("a")]; //converts to array so the forEach method can be used on it.
 
 const webDevPage = document.querySelector(".web-dev-page");
-const webTemplatesPage = document.querySelector(".web-templates-page");
-const uiPage = document.querySelector(".ui-page");
+const landingPage = document.querySelector(".landing-page");
+const copywritingPage = document.querySelector(".copywriting-page");
 const webPage = document.querySelector(".web-page");
-const logoPage = document.querySelector(".logo-page");
-const brandingPage = document.querySelector(".branding-page");
-const brandingPageGroup = document.querySelector(".branding-group");
+const contentWritingPage = document.querySelector(".content-writing-page");
+const webCopyPage = document.querySelector(".web-copy-page");
+const webCopyPageGroup = document.querySelector(".web-copy-group");
 const webDevPageGroup = document.querySelector(".web-dev-group");
-const webTemplatesPageGroup = document.querySelector(".web-templates-group");
-const uiPageGroup = document.querySelector(".ui-group");
-const logoPageGroup = document.querySelector(".logo-group");
+const landingPageGroup = document.querySelector(".landing-group");
+const copywritingPageGroup = document.querySelector(".copywriting-group");
+const contentWritingPageGroup = document.querySelector(".content-writing-group");
+const contactItemName = document.querySelectorAll(".item-name");
 
+console.log(allLinks);
 
-
+allLinks.forEach(a => {
+    a.addEventListener('click', (e) =>{
+        if (a.getAttribute("href") === "#"){
+            e.preventDefault();
+        }
+        // This event listener targets all links in the document and prevents the default jump for anchor tags set to href="#".
+    });
+});
 priceListItem.forEach(a => {
 
     a.addEventListener('click', (e) =>{
@@ -38,109 +48,109 @@ priceListItem.forEach(a => {
 webDevPage.addEventListener('click', (e) =>{
     e.preventDefault();
     webDevPageGroup.style.left = "0%";
-    uiPageGroup.style.left = "100%";
-    logoPageGroup.style.left = "100%";
-    webTemplatesPageGroup.style.left = "100%";
-    brandingPageGroup.style.left = "100%";
+    copywritingPageGroup.style.left = "100%";
+    contentWritingPageGroup.style.left = "100%";
+    landingPageGroup.style.left = "100%";
+    webCopyPageGroup.style.left = "100%";
 
     if(webDevPageGroup.style.left == "0%"){
         webDevPage.style.backgroundColor = "gold";
-        brandingPage.style.backgroundColor = "transparent";
-        logoPage.style.backgroundColor = "transparent";
-        uiPage.style.backgroundColor = "transparent";
-        webTemplatesPage.style.backgroundColor = "transparent";
-        uiPage.style.color = "black";
-        webTemplatesPage.style.color = "black";
-        logoPage.style.color = "black";
-        brandingPage.style.color = "black";
+        webCopyPage.style.backgroundColor = "transparent";
+        contentWritingPage.style.backgroundColor = "transparent";
+        copywritingPage.style.backgroundColor = "transparent";
+        landingPage.style.backgroundColor = "transparent";
+        copywritingPage.style.color = "black";
+        landingPage.style.color = "black";
+        contentWritingPage.style.color = "black";
+        webCopyPage.style.color = "black";
         webDevPage.style.color = "white";
     }
 });
 
-webTemplatesPage.addEventListener('click', (a) =>{
+landingPage.addEventListener('click', (a) =>{
     a.preventDefault();
     webDevPageGroup.style.left = "100%";
-    uiPageGroup.style.left = "100%";
-    logoPageGroup.style.left = "100%";
-    brandingPageGroup.style.left = "100%";
-    webTemplatesPageGroup.style.left = "0%";
+    copywritingPageGroup.style.left = "100%";
+    contentWritingPageGroup.style.left = "100%";
+    webCopyPageGroup.style.left = "100%";
+    landingPageGroup.style.left = "0%";
 
-    if(webTemplatesPageGroup.style.left == "0%"){
-        webTemplatesPage.style.backgroundColor = "gold";
-        brandingPage.style.backgroundColor = "transparent";
-        logoPage.style.backgroundColor = "transparent";
-        uiPage.style.backgroundColor = "transparent";
+    if(landingPageGroup.style.left == "0%"){
+        landingPage.style.backgroundColor = "gold";
+        webCopyPage.style.backgroundColor = "transparent";
+        contentWritingPage.style.backgroundColor = "transparent";
+        copywritingPage.style.backgroundColor = "transparent";
         webDevPage.style.backgroundColor = "transparent";
-        uiPage.style.color = "black";
-        webTemplatesPage.style.color = "white";
-        logoPage.style.color = "black";
-        brandingPage.style.color = "black";
+        copywritingPage.style.color = "black";
+        landingPage.style.color = "white";
+        contentWritingPage.style.color = "black";
+        webCopyPage.style.color = "black";
         webDevPage.style.color = "black";
     }
 });
 
-uiPage.addEventListener('click', (e) =>{
+copywritingPage.addEventListener('click', (e) =>{
     e.preventDefault();
     webDevPageGroup.style.left = "100%";
-    webTemplatesPageGroup.style.left = "100%";
-    logoPageGroup.style.left = "100%";
-    brandingPageGroup.style.left = "100%";
-    uiPageGroup.style.left = "0%";
+    landingPageGroup.style.left = "100%";
+    contentWritingPageGroup.style.left = "100%";
+    webCopyPageGroup.style.left = "100%";
+    copywritingPageGroup.style.left = "0%";
 
-    if(uiPageGroup.style.left == "0%"){
-        uiPage.style.backgroundColor = "gold";
-        brandingPage.style.backgroundColor = "transparent";
-        logoPage.style.backgroundColor = "transparent";
-        webTemplatesPage.style.backgroundColor = "transparent";
+    if(copywritingPageGroup.style.left == "0%"){
+        copywritingPage.style.backgroundColor = "gold";
+        webCopyPage.style.backgroundColor = "transparent";
+        contentWritingPage.style.backgroundColor = "transparent";
+        landingPage.style.backgroundColor = "transparent";
         webDevPage.style.backgroundColor = "transparent";
-        uiPage.style.color = "white";
-        webTemplatesPage.style.color = "black";
-        logoPage.style.color = "black";
-        brandingPage.style.color = "black";
+        copywritingPage.style.color = "white";
+        landingPage.style.color = "black";
+        contentWritingPage.style.color = "black";
+        webCopyPage.style.color = "black";
         webDevPage.style.color = "black";
     }
 });
 
-logoPage.addEventListener('click', (e) =>{
+contentWritingPage.addEventListener('click', (e) =>{
     e.preventDefault();
     webDevPageGroup.style.left = "100%";
-    webTemplatesPageGroup.style.left = "100%";
-    uiPageGroup.style.left = "100%";
-    brandingPageGroup.style.left = "100%";
-    logoPageGroup.style.left = "0%";
+    landingPageGroup.style.left = "100%";
+    copywritingPageGroup.style.left = "100%";
+    webCopyPageGroup.style.left = "100%";
+    contentWritingPageGroup.style.left = "0%";
 
-    if(logoPageGroup.style.left == "0%"){
-        logoPage.style.backgroundColor = "gold";
-        brandingPage.style.backgroundColor = "transparent";
-        uiPage.style.backgroundColor = "transparent";
-        webTemplatesPage.style.backgroundColor = "transparent";
+    if(contentWritingPageGroup.style.left == "0%"){
+        contentWritingPage.style.backgroundColor = "gold";
+        webCopyPage.style.backgroundColor = "transparent";
+        copywritingPage.style.backgroundColor = "transparent";
+        landingPage.style.backgroundColor = "transparent";
         webDevPage.style.backgroundColor = "transparent";
-        logoPage.style.color = "white";
-        webTemplatesPage.style.color = "black";
-        uiPage.style.color = "black";
-        brandingPage.style.color = "black";
+        contentWritingPage.style.color = "white";
+        landingPage.style.color = "black";
+        copywritingPage.style.color = "black";
+        webCopyPage.style.color = "black";
         webDevPage.style.color = "black";
     }
 });
 
-brandingPage.addEventListener('click', (e) =>{
+webCopyPage.addEventListener('click', (e) =>{
     e.preventDefault();
     webDevPageGroup.style.left = "100%";
-    webTemplatesPageGroup.style.left = "100%";
-    uiPageGroup.style.left = "100%";
-    logoPageGroup.style.left = "100%";
-    brandingPageGroup.style.left = "0%";
+    landingPageGroup.style.left = "100%";
+    copywritingPageGroup.style.left = "100%";
+    contentWritingPageGroup.style.left = "100%";
+    webCopyPageGroup.style.left = "0%";
 
-    if(brandingPageGroup.style.left == "0%"){
-        brandingPage.style.backgroundColor = "gold";
-        logoPage.style.backgroundColor = "transparent";
-        uiPage.style.backgroundColor = "transparent";
-        webTemplatesPage.style.backgroundColor = "transparent";
+    if(webCopyPageGroup.style.left == "0%"){
+        webCopyPage.style.backgroundColor = "gold";
+        contentWritingPage.style.backgroundColor = "transparent";
+        copywritingPage.style.backgroundColor = "transparent";
+        landingPage.style.backgroundColor = "transparent";
         webDevPage.style.backgroundColor = "transparent";
-        logoPage.style.color = "black";
-        webTemplatesPage.style.color = "black";
-        uiPage.style.color = "black";
-        brandingPage.style.color = "white";
+        contentWritingPage.style.color = "black";
+        landingPage.style.color = "black";
+        copywritingPage.style.color = "black";
+        webCopyPage.style.color = "white";
         webDevPage.style.color = "black";
     }
 });
