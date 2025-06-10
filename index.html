@@ -130,12 +130,12 @@
         <div class="mid-section">
 
             <!-- ====================================================== HERO SECTION -->
-            <div class="hero" id="hero">
+            <div class="sections hero" id="hero">
                 <div class="hero-text">
                     <h1>
                         I'm ozuluonye bede <span>frontend</span> developer
                     </h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos aperiam esse id ducimus necessitatibus cum voluptate doloribus placeat dolorum non facere.</p>
+                    <p>I love to build solutions that users will love to use and interact with. I pay attention to details and enjoy splashing creativity into my projects</p>
                     
                     <a href="#" class="primary-btn">
                         Hire Me
@@ -148,7 +148,7 @@
             </div>
 
             <!-- ====================================================== SERVICES SECTION -->
-            <div class="services" id="services">
+            <div class="sections services" id="services">
                 <div class="section-title">
                     <h2>My Services</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non ratione saepe odit facilis eius Animi.</p>
@@ -199,7 +199,7 @@
             </div>
 
             <!-- ====================================================== PRICE SECTION -->
-            <div class="price-section" id="price">
+            <div class="sections price-section" id="price">
                 <div class="section-title">
                     <h2>price plans</h2>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni odio ipsum impedit esse tenetur facilis qui.</p>
@@ -380,7 +380,7 @@
             </div>
 
             <!-- ====================================================== RECOMMENDATIONS SECTION -->
-            <div class="recommendation-section" id="recommendation">
+            <div class="sections recommendation-section" id="recommendation">
                 <div class="section-title">
                     <h2>Recommendations</h2>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni odio ipsum impedit esse tenetur facilis qui.</p>
@@ -449,15 +449,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="recommendation-page">
-                    <span class="page-span"></span>
-                    <span class="page-span"></span>
-                    <span class="page-span"></span>
-                </div>
             </div>
 
             <!-- ====================================================== PORTFOLIO SECTION -->
-            <div class="portfolio-section" id="portfolio">
+            <div class="sections portfolio-section" id="portfolio">
                     <div class="section-title">
                         <h2>My Portfolio</h2>
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere repellat ut rem tempora libero perspiciatis cumque. Repellat, veniam natus placeat.</p>
@@ -559,10 +554,7 @@
                                     <img src="assets/images/content-imgs/pheros.PNG" alt="">
                                     <div class="project-desc"> 
                                         <p>
-                                            <span class="bold">Banished by the gods. Hunted by his father. Chosen to save mankind.</span>
-
-                                            Pheros defies the gods to stop a rising darkness threatening mankind.
-
+                                            <span class="bold">Banished by the gods. Hunted by his father. Chosen to save mankind.</span>Pheros defies the gods to stop a rising darkness threatening mankind.
                                         </p>
                                         <a href="https://medium.com/@bedeozy/pheros-the-banished-god-protector-of-humans-da11afa4aab5" target="_blank" class="card-btn">Read more</a>
                                     </div>
@@ -685,21 +677,25 @@
             </div>
           
             <!-- ====================================================== CONTACT SECTION -->
-            <div class="contact-section" id="contact">
+            <div class="sections contact-section" id="contact">
                 <div class=" contact-session-title">
                     <h2 class="form-title">Want to reach out?</h2>
                     <h2 class="contact-details-title">My Contact</h2>
                 </div>
                 
                 <div class="contact-form">
-                    <form id="form-field" action="post" method="post">
+                    <form id="form-field" action="contact-message.html" method="post">
                         <div class="form-box">
                             <label for="full-name">Enter your full name</label>
-                            <input type="text" class="form-input" id="full-name">
+                            <input type="text" class="form-input" id="full-name" placeholder="Enter Your email" required>
+                            <p>Enter a name please</p>
+                            <!-- <span class="valid"></span>
+                            <span class="invalid"></span> -->
                         </div>
                         <div class="form-box">
                             <label for="email">Enter your email</label>
-                            <input type="text" class="form-input" id="email">
+                            <input type="email" class="form-input" id="email" placeholder="Enter Your email" required>
+                            <p>Enter a name please</p>
                         </div>
                         <div class="form-box">
                             <label for="subject">Subject</label>
@@ -707,7 +703,7 @@
                         </div>
                         <div class="form-box">
                             <label for="message">Your message</label>
-                            <textarea name="message" id="message"></textarea>
+                            <textarea name="message" id="message" placeholder="Type your message/enquiry" required></textarea>
                         </div>
                         
                         <button type="submit" class="primary-btn" id="contact-message-button">

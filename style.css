@@ -10,7 +10,7 @@ html{
 }
 
 body{
-    background-color: #ecf1d5;
+    background-color: #ecf1d58a;
 }
 
 .container{
@@ -378,6 +378,7 @@ body{
 .services-box .service-card{
     background-color: #fff;
     border-radius: 6px;
+    width:100%;
 
     display:flex;
     flex-direction: column;
@@ -460,7 +461,7 @@ body{
 }
 
 .price-box a.show-shadow{
-    box-shadow: 0px 0px 10px #ccc;
+    box-shadow: 3px 3px 5px #e9e9e9;
     transform: scale(0.97);
 }
 
@@ -585,7 +586,6 @@ body{
 .recommendation-section .recommendation-box{
     width:100%;
     height:300px;
-    /* background-color: green; */
 
     display:grid;
     grid-template-columns: repeat(3, 1fr);
@@ -988,9 +988,24 @@ body{
 }
 
 #form-field .form-box{
+    position:relative;
     display:flex;
     flex-direction: column;
     gap:10px;
+}
+
+#form-field .form-box p{
+    color:red;
+    font-size:small;
+    display: none;
+}
+
+#form-field .form-box input:invalid:not(:placeholder-shown){
+    border:1px solid red;
+}
+
+#form-field .form-box input:invalid:not(:placeholder-shown) + p{
+    display: block;
 }
 
 .form-box label{
@@ -1013,6 +1028,9 @@ body{
     box-shadow: 2px 2px 5px #ddd;
 }
 
+#form-field textarea:placeholder-shown{
+    font-size:15px;
+}
 #form-field textarea{
     width:100%;
     height: 150px;
@@ -1185,4 +1203,192 @@ footer{
     display:flex;
     justify-content: center;
     align-items: center;
+}
+
+
+
+
+
+
+
+
+
+@media (max-width:900px) {
+    .container{
+        display:block;
+        padding:10px;
+    }
+
+    .container .left-section{
+        display:none;
+    }
+
+    .primary-btn:hover{
+    background-color: rgba(238, 175, 17, 0.534);
+    backdrop-filter: blur(10px);
+    /* filter: blur(20); */
+    color:#000;
+    border:1px solid #000;
+}
+
+    .mid-section{
+        width:100%;
+    }
+
+    .mid-section .hero{
+        position:relative;
+        flex-direction: column;
+        height:88vh;
+    }
+
+    .mid-section .hero .hero-text{
+        width:100%;
+        padding:20px;
+        text-align: center;
+    }
+
+    .mid-section .hero .hero-text h1,
+    .mid-section .hero .hero-text p{
+        text-align: center;
+        width:100%;
+    }
+
+    .mid-section .hero .hero-text p{
+        font-size: 1.2em;
+    }
+
+
+    .mid-section .hero .primary-btn{
+        position:absolute;
+        bottom:10px;
+        left:50%;
+        transform: translateX(-75px);
+    }
+
+    .mid-section .hero .hero-img{
+        /* background-color: green; */
+        width:90%;
+    }
+
+    .mid-section .hero img{
+        width:100%;
+    } 
+
+    .mid-section .sections{
+        width:100%;
+        /* background-color: blue; */
+    }
+
+    .mid-section .services{
+        height:950px;
+        justify-content: start;
+        /* background-color: black; */
+    }
+
+    .mid-section .services .services-box {
+        /* display: flex; */
+        /* height:800px; */
+        width:89%;
+        height:700px;
+        gap:10px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        padding:10px;
+    }
+
+    .mid-section .services .services-box .service-card {
+        padding:10px;
+        /* padding:15px 0; */
+        /* flex-basis: 300px; */
+        width:100%;
+        border:1px solid #f1f1f1;
+        box-shadow:1px 1px 3px #d4d4d4;
+        /* background-color: yellow; */
+    }
+
+    .mid-section .services .service-card .desc{
+        width:100%;
+        font-size: small;
+    }
+
+    .mid-section .services .service-card .service-name{
+        text-align: center;
+    }
+
+    .mid-section .price-section{
+        height:2150px;
+        justify-content: start;
+    }
+
+    .mid-section .price-section .price-box{
+        display:flex;
+        height:350vh;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mid-section .price-section .price-box a{
+        width:85%;
+        padding:50px 20px;
+    }
+
+    .mid-section .price-section .price-box a{
+        width:85%;
+        padding:50px 20px;
+    }
+
+    .mid-section .recommendation-section{
+        /* background-color: red; */
+        height:180vh;
+    }
+
+    .recommendation-section .recommendation-box{
+        width:80%;
+        height:1000px;
+        padding:10px;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: 1fr;
+        gap:20px;
+    }
+
+    .mid-section .portfolio-section{
+        height:300vh;
+    }
+
+    .mid-section .portfolio-section .portfolio-list{
+        height:50px;
+        width:500px;
+        padding:5px;
+        align-items: center;
+        overflow-x: scroll;
+    }
+
+    .mid-section .portfolio-section .group{
+        background-color: red;
+        height:200vh;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .right-section{
+        background-color: red;
+        width:100%;
+        height:50px;
+        bottom:0;
+        left:0;
+        border-radius:0px;
+    }
+
+    .right-section .right-menu{
+        width:100%;
+        height:100%;
+        background-color: yellow;
+        left:0;
+        top:0;
+    }
+
+    .right-section .right-menu ul{
+        width:100%;
+        height:100%;
+        flex-direction: row;
+    }
 }
